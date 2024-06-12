@@ -1,4 +1,13 @@
-//In this code we will use stack to check the balance of parentheses.
+//Student Info
+/*
+  COP3502C Lab 4 Assignment
+  This program is written by: 
+  Nicholas Eric Newman
+  Due date June 13, 2024
+  student ID 5292926
+  */
+
+//In this code we will use stack to check the balance of parentheses and print out the postfix expression
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -60,7 +69,6 @@ int main(void) {
 
          free(postfix);
      }
-
 
 
 
@@ -159,6 +167,7 @@ int checkBalance(char exp[]){
 char *infixToPostfix(char infix[]){
     //create a stack to store operators
     struct stack operatorStack;
+    
     //initialize the stack
     initialize(&operatorStack);
 
@@ -217,8 +226,8 @@ char *infixToPostfix(char infix[]){
                     //pop operator and add it to the postfix expression
                     postFix[counter] = pop(&operatorStack);
                     counter++;
-                    postFix[counter] = ' ';
                     //add space between characters
+                    postFix[counter] = ' ';
                     counter++;
                 }
 
@@ -264,6 +273,7 @@ char *infixToPostfix(char infix[]){
       counter++;
     }
     //do not forget to put the null terminator to the end of postfix
+    postFix[counter] = '\0';
 
   //return postfix expression  
   return postFix;
