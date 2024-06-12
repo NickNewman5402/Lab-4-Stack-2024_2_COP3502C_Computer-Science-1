@@ -1,4 +1,13 @@
-//In this code we will use stack to check the balance of parentheses.
+//Student Info
+/*
+  COP3502C Lab 4 Assignment
+  This program is written by: 
+  Nicholas Eric Newman
+  Due date June 13, 2024
+  student ID 5292926
+  */
+
+//In this code we will use stack to check the balance of parentheses and print out the postfix expression
 
 #include <stdio.h>
 #include <stdlib.h>
